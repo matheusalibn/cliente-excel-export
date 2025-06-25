@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { Client } from '@/types/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { FileExcel, Search, Download } from 'lucide-react';
+import { FileSpreadsheet, Search, Download } from 'lucide-react';
 import { exportToExcel } from '@/utils/excelUtils';
 import { useToast } from '@/hooks/use-toast';
 
@@ -73,7 +72,7 @@ const ClientTable: React.FC<ClientTableProps> = ({ clients }) => {
             className="bg-green-600 hover:bg-green-700 text-white flex items-center gap-2"
             disabled={filteredClients.length === 0}
           >
-            <FileExcel className="w-4 h-4" />
+            <FileSpreadsheet className="w-4 h-4" />
             Exportar Excel
           </Button>
         </div>
